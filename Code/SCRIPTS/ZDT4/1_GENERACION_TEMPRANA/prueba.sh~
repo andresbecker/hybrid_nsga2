@@ -1,0 +1,8 @@
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
+
+awk '{if($0!~/#/){print $1}}' gd_g.out > temp.txt
+
+i=$(awk 'BEGIN{getline ejec < "temp.txt"}{if($1==ejec){print NR}}' medidas_g.out)
+
+echo $i

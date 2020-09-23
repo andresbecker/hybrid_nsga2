@@ -1,0 +1,12 @@
+#Instrucciones para compilar, ejecutar el algoritmo y generar graficos.
+#Ejecute cada linea despues del comentario.
+
+#1.- Compilamos
+gcc -lm GA.c -o GA
+
+#2.- Ejecutamos algoritmo "GA" con parametros de entrada "parametros.in"
+./GA < parametros.in
+
+#3.- Generamos graficos. Importante! debe tener instalado el paqete gnuplot
+gnuplot script_graficos.gnu
+

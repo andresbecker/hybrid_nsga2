@@ -1,0 +1,14 @@
+set terminal png nocrop enhanced size 800,800 font "arial,10" 
+set output 'G_pareto_ZDT1.png'
+set samples 800, 800 
+set title "{/=15 ZDT1}"
+set ylabel "{/=13 GD}" 
+set xlabel "{/=13 Generaciones}"
+
+#FIJA EL ANCHO DE LAS CAJAS
+#set bar 10.000000
+
+#set yrange [ -0.8 : -0.4 ] noreverse nowriteback
+#set xrange [ 0.3 : 0.5 ] noreverse nowriteback
+
+plot 'pareto.dat' title 'FRENTE DE PARETO' with points lc rgb "black", '90.dat' lt 5 title 'NSGA-II HIBRIDO' lc rgb "red", '105.dat' lt 5 title 'NSGA-II HIBRIDO'

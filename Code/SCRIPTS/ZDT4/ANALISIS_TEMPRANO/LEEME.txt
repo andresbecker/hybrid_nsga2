@@ -1,0 +1,2 @@
+EL SCRIPT "script.sh" lleva a cabo 30 ejecuciones del nsga2 original e hibrido en la generacion que el usuario seleccione.
+Este script realiza incluso las graficas del IGD y GD.

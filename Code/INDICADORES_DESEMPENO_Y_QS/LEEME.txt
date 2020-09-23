@@ -1,0 +1,2 @@
+El programa "h" calcula los indicadores IGD, GD y DELTAp para 2 conjuntos dados en un archivo de texto.
+El prorama "qs" ordena un conjunto dado en un archivo de texto, se adjunta que que es necesario para algunos Scripts.

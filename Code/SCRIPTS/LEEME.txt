@@ -1,0 +1,5 @@
+Las carpetas ZDT* contienen los Scripts usados para generar las graficas mostradas en la tesis para las funciones de prueba usadas. Además, contienen otros Scripts usados para determinar cuando es el mejor momento de aplicar el método del gradiente (ANALISIS_TE,PRANO).
+Todas las gráficas se generaron usando GNUPLOT.
+Los escrips se ejecutas simplemente abriendo una terminal en la ruta donde se encuentra y ejecutando en ella "./script.sh".
+Si los escripts no se ejecutan es probable que tengas que darle privilejos de ejecución, basta con escribir en la misma terminal "sudo chmod +x script.sh".
+

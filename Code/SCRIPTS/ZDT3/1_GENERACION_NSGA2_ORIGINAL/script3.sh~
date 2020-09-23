@@ -1,0 +1,49 @@
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
+
+rm medidas_g.out medidas_o.out GRAFICAS/*.dat
+
+    for i in {1..30}
+    do
+        b=0.67843333
+        echo "REALIZANDO EJECUCION: "$i;
+        #Ejecuta el NSGA-II+MDPM
+        ./nsga2r $(bc <<< 'scale=8; '$b' + (1-'$b')*('$i'-1)/30') < INPUT_DATA/zdt1_p1.in > borrar.txt
+        echo "Numero de evaluaciones NSGA-II+MDPM:"
+        awk '{print $0}' eval.out
+        #Extrae la ultima poblacion para sacar GD e IGD
+        awk '{if($0!~/#/)print $1, $2;}' final_pop.out > frente_aprox.dat
+        #Calculamos GD e IGD para NSGA-II+MDPM
+        ./h 500 < INPUT_DATA/h.in >> medidas_g.out
+	#CREAMOS ARCHIVO PARA EJECUTAR NSGA-II ORIGINAL CON IGUAL NUMERO DE EVALUACIONES DE LA FUNCION OBJETIVO
+	awk -f AWK/archivo_nsga2.awk INPUT_DATA/zdt1.in > INPUT_DATA/zdt1_o.in
+        ./nsga2r $(bc <<< 'scale=8; '$b' + (1-'$b')*('$i'-1)/30') < INPUT_DATA/zdt1_p2.in > borrar.txt
+        echo "Numero de evaluaciones NSGA-II original:"
+        awk '{print $0}' eval.out
+        awk '{if($0!~/#/)print $1, $2;}' final_pop.out > frente_aprox.dat
+        #Calculamos GD e IGD para NSGA-II
+        ./h 500 < INPUT_DATA/h.in >> medidas_o.out
+    done
+#Generamos archivos para graficas de caja del NSGA-II+MDPM
+echo "medidas_g.out" | ./qs1 30
+cp gd_box.out gd_g.out
+cp igd_box.out igd_g.out
+rm gd_box.out igd_box.out
+
+#Generamos archivos para graficas de caja del NSGA-II
+echo "medidas_o.out" | ./qs1 30
+cp gd_box.out gd_o.out
+cp igd_box.out igd_o.out
+rm gd_box.out igd_box.out
+
+#GENERAMOS GRAFICO
+awk '{if($0!~/\#/){print 1, $0, "ORI"}}' gd_o.out >> GRAFICAS/gd.dat
+awk '{if($0!~/\#/){print 2, $0, "HIB"}}' gd_g.out >> GRAFICAS/gd.dat
+awk '{if($0!~/\#/){print 1, $0, "ORI"}}' igd_o.out >> GRAFICAS/igd.dat
+awk '{if($0!~/\#/){print 2, $0, "HIB"}}' igd_g.out >> GRAFICAS/igd.dat
+cd GRAFICAS/
+gnuplot GD.gnu IGD.gnu
+cd ..
+
+
+rm all_pop.out best_pop.out borrar.txt eval.out final_pop.out frente_aprox.dat initial_pop.out params.out qs.out

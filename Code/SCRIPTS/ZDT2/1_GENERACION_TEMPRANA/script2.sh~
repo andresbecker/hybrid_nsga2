@@ -1,0 +1,19 @@
+#!/bin/bash
+# -*- ENCODING: UTF-8 -*-
+
+rm PRUEBA/*.png
+
+semilla=0.67843333
+
+awk 'BEGIN{getline eval < "eval.out"}{if(NR==2){printf("%d\n",50)}else{if(NR==49){printf("%d\n",55)}else{print $0}}}' PRUEBA/zdt1.in | ./nsga2r $semilla
+awk '{print $1, $2}' final_pop.out > PRUEBA/90.dat
+
+#awk '{if(NR==49){print "90"}else{print $0}}' PRUEBA/zdt1.in | ./nsga2r $semilla
+#awk '{print $1, $2}' final_pop.out > PRUEBA/g.dat
+
+awk 'BEGIN{getline eval < "eval.out"}{if(NR==2){printf("%d\n",155)}else{if(NR==49){printf("%d\n",1+155)}else{print $0}}}' PRUEBA/zdt1.in | ./nsga2r $semilla
+awk '{print $1, $2}' final_pop.out > PRUEBA/201.dat
+
+cd PRUEBA/
+gnuplot *.gnu
+cd ..
