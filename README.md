@@ -16,23 +16,23 @@ In genetic algorithms like those used here, the environment is represented by a 
 To test the advantages of merging the NSGA-II algorithm with a gradient based method, several test functions were used. You can take a look at these results and references in my dissertation document (Documentation/ABecker_Thesis.pdf), which is in spanish unfortunately. However, here you can see some animations for the bi-objective test optimization function Zitzler–Deb–Thiele (ZDT, https://en.wikipedia.org/wiki/Test_functions_for_optimization), which show the advantages of the hybrid algorithm:
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT1.gif" width="300">
+  <img src="Code/Test_Problems/ZDT1/ZDT1.gif" width="300">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT2.gif" width="300">
+  <img src="Code/Test_Problems/ZDT2/ZDT2.gif" width="300">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT3.gif" width="300">
+  <img src="Code/Test_Problems/ZDT3/ZDT3.gif" width="300">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT4.gif" width="300">
+  <img src="Code/Test_Problems/ZDT4/ZDT4.gif" width="300">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT6.gif" width="300">
+  <img src="Code/Test_Problems/ZDT6/ZDT6.gif" width="300">
 </p>
 
 This thesis is based on the work of my thesis advisor
