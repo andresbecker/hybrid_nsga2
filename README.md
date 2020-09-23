@@ -8,7 +8,7 @@ If you wonder how these algorithms can find local solutions to optimization prob
 In genetic algorithms like those used here, the environment is represented by a mathematical function that we want to minimize or maximize (the objective function) and the individuals of the population by solutions of the objective function. Then, the fit of an individual (solution) in the environment,  will be the result of evaluating the objective function with this individual. For example, in the following animation we can see how a group of solutions (individuals of the population) of the objective function (environment), evolve in each generation until eventually converging to the global maximum.
 
 <p align="center">
-  <img src="Code/Singel_Obj_GA/GA.GIF" width="300">
+  <img src="Code/Singel_Obj_GA/GA.GIF" width="500">
 </p>
 
 **Dissertation Results**
@@ -16,23 +16,23 @@ In genetic algorithms like those used here, the environment is represented by a 
 To test the advantages of merging the NSGA-II algorithm with a gradient based method, several test functions were used. You can take a look at these results and references in my dissertation document (Documentation/ABecker_Thesis.pdf), which is in spanish unfortunately. However, here you can see some animations for the bi-objective test optimization function Zitzler–Deb–Thiele (ZDT, https://en.wikipedia.org/wiki/Test_functions_for_optimization), which show the advantages of the hybrid algorithm:
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT1/ZDT1.gif" width="300">
+  <img src="Code/Test_Problems/ZDT1/ZDT1.gif" width="600">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT2/ZDT2.gif" width="300">
+  <img src="Code/Test_Problems/ZDT2/ZDT2.gif" width="600">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT3/ZDT3.gif" width="300">
+  <img src="Code/Test_Problems/ZDT3/ZDT3.gif" width="600">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT4/ZDT4.gif" width="300">
+  <img src="Code/Test_Problems/ZDT4/ZDT4.gif" width="600">
 </p>
 
 <p align="center">
-  <img src="Code/Test_Problems/ZDT6/ZDT6.gif" width="300">
+  <img src="Code/Test_Problems/ZDT6/ZDT6.gif" width="600">
 </p>
 
 This thesis is based on the work of my thesis advisor
