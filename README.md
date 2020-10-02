@@ -13,7 +13,7 @@ In genetic algorithms like those showed here, the environment is represented by 
 
 **Dissertation Results**
 ---
-To test the advantages of merging the NSGA-II algorithm with a gradient based method, several test functions were used. You can take a look at these results and references in my dissertation document (Documentation/ABecker_Thesis.pdf), which is in spanish unfortunately. However, here you can see some animations for the bi-objective test optimization function Zitzler–Deb–Thiele (ZDT, https://en.wikipedia.org/wiki/Test_functions_for_optimization), which show the advantages of the hybrid algorithm:
+To show the advantages of merging the NSGA-II algorithm with a gradient based method, several test functions were used. You can take a look at these results and references in my dissertation document (Documentation/ABecker_Thesis.pdf), which is in spanish unfortunately, or you can see here some animations for the bi-objective test optimization function Zitzler–Deb–Thiele (ZDT, https://en.wikipedia.org/wiki/Test_functions_for_optimization), Which show the improvement in performance of the hybrid algorithm compared to the original:
 
 <p align="center">
   <img src="Code/Test_Problems/ZDT1/ZDT1.gif" width="600">
@@ -37,18 +37,18 @@ To test the advantages of merging the NSGA-II algorithm with a gradient based me
 
 This dissertation is based on a paper of my advisor, the Dr. Adriana Lara López, whom I appreciate and thank very much for giving me such an interesting topic:
 
-Authors: A. L. López, C. A. C. Coello and O. Schütze<br>
-Title: A painless gradient-assisted multi-objective memetic mechanism for solving continuous bi-objective optimization problems<br>
-Journal: IEEE Congress on Evolutionary Computation
-Year: 2010<br>
-Pages: 1-8<br>
+Authors: *A. L. López, C. A. C. Coello and O. Schütze*<br>
+Paper Title: *A painless gradient-assisted multi-objective memetic mechanism for solving continuous bi-objective optimization problems*<br>
+Journal: *IEEE Congress on Evolutionary Computation*
+Year: *2010*<br>
+Pages: *1-8*<br>
 
 **About the original NSGA-II Algorithm**
 ---
-Authors: Dr. Kalyanmoy Deb, Sameer Agrawal, Amrit Pratap, T Meyarivan<br>
-Paper Title: A Fast and Elitist multi-objective Genetic Algorithm: NSGA-II<br>
-Journal: IEEE Transactions on Evolutionary Computation (IEEE-TEC)<br>
-Year: 2002<br>
-Volume: 6<br>
-Number: 2<br>
-Pages: 182-197
+Authors: *Dr. Kalyanmoy Deb, Sameer Agrawal, Amrit Pratap, T Meyarivan*<br>
+Paper Title: *A Fast and Elitist multi-objective Genetic Algorithm: NSGA-II*<br>
+Journal: *IEEE Transactions on Evolutionary Computation (IEEE-TEC)*<br>
+Year: *2002*<br>
+Volume: *6*<br>
+Number: *2*<br>
+Pages: *182-197*
