@@ -13,7 +13,7 @@ In genetic algorithms like those showed here, the environment is represented by 
 
 **Dissertation Results**
 ---
-To show the advantages of merging the NSGA-II algorithm with a gradient based method, several test functions were used. You can take a look at these results and references in my dissertation document (Documentation/ABecker_Thesis.pdf), which is in spanish unfortunately, or you can see here some animations for the bi-objective test optimization function Zitzler–Deb–Thiele (ZDT, https://en.wikipedia.org/wiki/Test_functions_for_optimization), Which show the improvement in performance of the hybrid algorithm compared to the original:
+To show the advantages of merging the NSGA-II algorithm with a gradient based method, several test functions were used. You can take a look at these results and references in my dissertation document (Documentation/ABecker_Thesis.pdf), which is in spanish unfortunately, or you can see here some animations for the bi-objective test optimization function Zitzler–Deb–Thiele (ZDT, https://en.wikipedia.org/wiki/Test_functions_for_optimization), which show the improvement in performance of the hybrid algorithm compared to the original NSGA-II:
 
 <p align="center">
   <img src="Code/Test_Problems/ZDT1/ZDT1.gif" width="600">
